@@ -30,6 +30,8 @@ def main
   puts schedule_run_json
   # this json data is being used as input payload for other http call
 
+  schedule_run.delete
+
   # upon updating an attribute on schedule is also inserting new records into schedule_runs and format_lies
   # for the objects initialized above
   schedule.update_attribute(:status, 'Scheduled')
